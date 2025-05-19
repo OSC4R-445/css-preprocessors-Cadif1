@@ -1,0 +1,186 @@
+.button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+
+  &.primary {
+    background-color: #007bff;
+    color: white;
+
+    &:active {
+      background-color: darken(#007bff, 20%);
+    }
+
+    &:hover {
+      background-color: darken(#007bff, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: #6c757d;
+    color: white;
+
+    &:active {
+      background-color: darken(#6c757d, 20%);
+    }
+
+    &:hover {
+      background-color: darken(#6c757d, 10%);
+    }
+  }
+
+  &.button--disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+}
+
+/*****************************/
+
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; // Para que la sombra interior no se desborde
+
+  &-content {
+    color: #333;
+    font-size: 1em;
+    padding: 16px;
+  }
+
+  &--inner-shadow {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &--shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &-title {
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 16px;
+  }
+
+  &--primary {
+    border-color: #007bff;
+
+    &-title {
+      background-color: #e7f5ff;
+      color: #007bff;
+    }
+  }
+
+  &--secondary {
+    border-color: #6c757d;
+
+    &-title {
+      background-color: #f8f9fa;
+      color: #6c757d;
+    }
+  }
+
+  &--warning {
+    border-color: #ffc107;
+
+    &-title {
+      background-color: #fff3cd;
+      color: #85640a;
+    }
+  }
+}
+
+/*****************************/
+
+.nav {
+  background-color: #f8f9fa;
+  padding: 10px;
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      position: relative; // Necesario para posicionar submenús absolutamente
+
+      .nav-link {
+        color: #333;
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #e9ecef;
+        }
+      }
+
+      // Primer nivel de submenú (Generación 2)
+      .nav-sublist {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        display: none; // Ocultar submenús por defecto
+        left: 10%;
+        position: absolute;
+        top: 0; // Ajustar según sea necesario
+        z-index: 10; // Asegurar que esté por encima de otros elementos
+
+        .nav-subitem {
+          .nav-sublink {
+            display: block;
+            padding: 10px 25px; // Indentación
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+              background-color: #f8f9fa;
+            }
+          }
+
+          // Segundo nivel de submenú (Generación 3)
+          .nav-sublist-level-2 {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 11;
+
+            .nav-subitem-level-2 {
+              .nav-sublink-level-2 {
+                display: block;
+                padding: 10px 40px; // Mayor indentación
+                text-decoration: none;
+                color: #333;
+
+                &:hover {
+                  background-color: #f1f3f5;
+                }
+              }
+            }
+          }
+
+          &:hover > .nav-sublist-level-2 {
+            display: block;
+          }
+        }
+      }
+
+      &:hover > .nav-sublist {
+        display: block;
+      }
+    }
+  }
+}
