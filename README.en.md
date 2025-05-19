@@ -29,4 +29,8 @@ This assignment focuses on using **Sass** to create reusable components and navi
 ### 📝 Execution Instructions
 1. Install Node.js and Sass:
 
-Once Node.js is installed from its website, run the following command:  
+Once Node.js is installed from its website, run the following command: `npm install -g sass`
+
+> Run it from the **CursoCADI** folder.  
+
+> Make sure to execute it as administrator.  
