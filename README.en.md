@@ -14,7 +14,7 @@ This repository contains projects and practices from the CADI course on CSS prep
 ### ✅ Current Progress
 | Level | Assignment 1 |
 |------|--------------|
-| lvl-1 | ✅           |
+| [lvl-1](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1/README.en.md) | [✅](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1_assign-1/README.en.md)           |
 
 ---
 
