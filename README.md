@@ -1,4 +1,4 @@
-# 📘 Css Prerocessors Practice Repository
+# 📘 CSS Prerocessors Practice Repository
 
 🌐 Choose your language / Elige tu idioma:
 
