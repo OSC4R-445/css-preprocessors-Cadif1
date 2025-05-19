@@ -1,4 +1,4 @@
-# 📘 JavaScript Practice Repository
+# 📘 CSS Preprocessors Repository
 
 🌐 Choose your language / Elige tu idioma:
 
