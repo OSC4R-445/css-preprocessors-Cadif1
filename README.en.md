@@ -33,7 +33,7 @@ Once Node.js is installed from its website, run the following command: `npm inst
 
 2. Compile the SCSS file:
  
-run the following command:`sass scss:css`
+run the following command: `sass scss:css`
 
 > Run it from the **CursoCADI** folder.  
 
