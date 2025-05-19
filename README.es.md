@@ -29,11 +29,12 @@ Esta asignación está centrada en el uso de **Sass** para crear componentes reu
 ### 📝 Instrucciones de Ejecución
 1. Instalar Node.js y Sass:
 
-una vez instalado Node.js desde su pag, ejecuta el bash:`npm install -g sass`
+una vez instalado Node.js desde su pag, ejecuta el bash: `npm install -g sass`
 
 2. Compilar el archivo SCSS:
 
-ejecuta el bash:`sass scss:css`
+ejecuta el bash: `sass scss:css`
 
 >ejecuta desde la carpeta CursoCADI
+
 >asegurate de hacerlo como admin
