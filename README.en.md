@@ -5,7 +5,7 @@ This branch contains the challenges corresponding to Level 1 of the CADI course 
 ---
 
 ### 📂 Assignment Structure
-- **lvl-1_assign-1**: Creation of buttons, cards, and a navigation system using Sass.
+- [**lvl-1_assign-1**](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1_assign-1/README.en.md): Creation of buttons, cards, and a navigation system using Sass.
 
 ---
 
