@@ -35,6 +35,6 @@ una vez instalado Node.js desde su pag, ejecuta el comando: `npm install -g sass
 
 ejecuta el comando: `sass scss:css`
 
->ejecuta desde la carpeta CursoCADI
+>ejecuta desde la carpeta **CursoCADI**
 
 >asegurate de hacerlo como admin
