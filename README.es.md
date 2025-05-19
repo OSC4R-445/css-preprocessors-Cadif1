@@ -14,7 +14,7 @@ Este repositorio contiene proyectos y prácticas del curso CADI sobre preprocesa
 ### ✅ Progreso Actual
 | Nivel | Asignación 1 |
 |------|--------------|
-| lvl-1 | ✅           |
+| [lvl-1](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1/README.es.md) | [✅](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1_assign-1/README.es.md)           |
 
 ---
 
