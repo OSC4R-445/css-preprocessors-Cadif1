@@ -6,6 +6,7 @@ Esta rama contiene los desafíos correspondientes al nivel 1 del curso CADI sobr
 
 ### 📂 Estructura de Asignaciones
 - [**lvl-1_assign-1**](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1_assign-1/README.es.md): Creación de botones, tarjetas y un sistema de navegación utilizando Sass.
+- [**lvl-1_assign-2**](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1_assign-2/README.es.md): Modular webpage using SCSS components and **@extend**.
 
 ---
 
