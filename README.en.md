@@ -1,20 +1,45 @@
-# 🚀 Level 1 - CSS Preprocessors
+# 🎨 Assignment 2 - Level 1: Sass-Based Page Layout
 
-This branch contains the challenges corresponding to Level 1 of the CADI course on CSS preprocessors. The main focus is learning to use **Sass** to create reusable components and structure CSS code in a modular way.
+### 📂 Main Files
+- [`Desaf2-scss/index.html`](Desaf2-scss/index.html)
+- [`Desaf2-scss/scss/style.scss`](Desaf2-scss/scss/style.scss)
+- [`Desaf2-scss/scss/variables.scss`](Desaf2-scss/scss/variables.scss)
+- [`Desaf2-scss/scss/header.scss`](Desaf2-scss/scss/header.scss)
+- [`Desaf2-scss/scss/footer.scss`](Desaf2-scss/scss/footer.scss)
+- [`Desaf2-scss/scss/learning.scss`](Desaf2-scss/scss/learning.scss)
+- [`Desaf2-scss/scss/philosophy.scss`](Desaf2-scss/scss/philosophy.scss)
+- [`Desaf2-scss/scss/practice.scss`](Desaf2-scss/scss/practice.scss)
+- [`Desaf2-scss/scss/games.scss`](Desaf2-scss/scss/games.scss)
 
 ---
 
-### 📂 Assignment Structure
-- [**lvl-1_assign-1**](https://github.com/OSC4R-445/css-preprocessors-Cadif1/blob/lvl-1_assign-1/README.en.md): Creation of buttons, cards, and a navigation system using Sass.
+### 📌 Description
+This assignment uses Sass to build a modular and scalable webpage. It includes semantic HTML, reusable components with `@extend`, global variables with `@use`, and clean imports via `@import`.
 
 ---
 
-### 💡 Purpose
-Organize and structure exercises related to using Sass in creating reusable components and nested styles.
+### 🛠️ Features Implemented
+
+1. **HTML Layout**
+   - Semantic structure (`header`, `main`, `footer`).
+   - Uses Google Fonts and modern layout techniques.
+
+2. **SCSS Modularization**
+   - `variables.scss`: Defines colors, font families, and spacing.
+   - `header.scss` & `footer.scss`: Layout and styling for each section.
+   - `style.scss`: Entry point that imports all partials.
+
+3. **Use of @extend**
+   - Feature boxes ("Learning", "Philosophy", "Practice", "Games") share a common base but vary by color.
 
 ---
 
-### 📥 Contributions
-1. Create a branch from this one using the format `lvl-1_assign-X`.
-2. Add your SCSS and CSS files in the corresponding folder.
-3. Document your progress in the assignment README.
+### 🧠 Notes
+- Each SCSS file is maintainable and self-contained.
+- The compiled output is a single CSS file that styles the entire page.
+- Design is clean, responsive-friendly, and thematically appropriate.
+
+---
+
+### ✅ Status
+Fully completed and functional — all project goals achieved.
