@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 100px 0 100px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  background-color: darkcyan;
+  color: white;
+  height: 20em;
+  margin-bottom: 2em;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+footer .separator-line {
+  margin-top: 1.6em;
+  margin-right: 1.6em;
+  width: 6em;
+  height: 0.1em;
+  background-color: white;
+}
+footer p {
+  height: 100%;
+  width: 55%;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,155 @@
+footer {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 100px 0 100px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  background-color: darkcyan;
+  color: white;
+  height: 20em;
+  margin-bottom: 2em;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+footer .separator-line {
+  margin-top: 1.6em;
+  margin-right: 1.6em;
+  width: 6em;
+  height: 0.1em;
+  background-color: white;
+}
+footer p {
+  height: 100%;
+  width: 55%;
+}
+
+header {
+  align-items: baseline;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  justify-content: space-between;
+  min-height: 20vh;
+}
+header h1 {
+  padding-left: 30px;
+  color: rgb(236, 109, 183);
+}
+header nav {
+  width: 60%;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+header li {
+  display: block;
+}
+header a {
+  color: black;
+  text-decoration: none;
+}
+
+.learning {
+  color: white;
+  background-color: rgb(0, 216, 216);
+}
+
+.philosophy {
+  color: white;
+  background-color: rgb(255, 208, 0);
+}
+
+.practice {
+  color: white;
+  background-color: rgb(224, 78, 151);
+}
+
+.games {
+  color: white;
+  background-color: rgb(58, 58, 206);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+main .main-image-container {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  background: #f0f0f0;
+}
+main .main-image-container img {
+  z-index: 0;
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+main .main-text-and-features {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  z-index: 2;
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-heading {
+  font-family: "Montserrat", sans-serif;
+  transform: translate(50%, 50%);
+  margin-bottom: 3rem;
+}
+.main-heading h2 {
+  color: blue;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.main-heading .subtitle {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.feature-boxes {
+  font-family: "Montserrat", sans-serif;
+  transform: translate(0, 50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.feature-boxes .feature-box {
+  padding: 5rem;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+.feature-boxes .feature-box i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.feature-boxes .feature-box span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
