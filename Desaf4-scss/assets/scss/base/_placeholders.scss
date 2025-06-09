@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use 'variables';
+// placeholders.scss
+
+// Placeholder para el formato de botón base
+%button-base {
+  border-radius: 1em;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  // Usando $anchoBoton para definir el ancho o la altura del botón base
+  width: variables.$anchoBoton * 12;
+  min-height: variables.$anchoBoton * 8;
+}

@@ -1,0 +1,44 @@
+@use 'sass:map';
+@use 'variables';
+
+// Mixin para centrar elementos flex (no necesita variables de 'variables.scss')
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para estilos responsivos
+@mixin respond-to($breakpoint) {
+  // Accede al mapa $breakpoints a través de su namespace 'variables.'
+  @if map.has-key(variables.$breakpoints, $breakpoint) {
+    @media (min-width: map.get(variables.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Breakpoint `#{$breakpoint}` doesn't exist in the variables.$breakpoints map.";
+  }
+}
+
+// Mixin para generar Custom Properties CSS desde un mapa de variables Sass
+@mixin generate-custom-properties($mapa-de-propiedades) {
+  :root {
+    @each $key, $value in $mapa-de-propiedades {
+      --#{$key}: #{$value};
+    }
+  }
+}
+
+// Mixin para el formato de botón que solicitaste (no necesita variables de 'variables.scss' internamente,
+// sus parámetros son locales, pero si usara, por ejemplo, $anchoBoton, sí necesitaría @use 'variables';)
+@mixin button-format($radius-top-left: 1em, $radius-top-right: 0, $radius-bottom-right: 0, $radius-bottom-left: 0) {
+  border-radius: $radius-top-left $radius-top-right $radius-bottom-right $radius-bottom-left;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Si aquí usaras variables.$anchoBoton, asegúrate de que esté importado arriba
+  // width: variables.$anchoBoton;
+}

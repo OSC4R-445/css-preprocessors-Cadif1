@@ -1,0 +1,52 @@
+@use 'sass:map';
+
+// Colores Map
+$colors: (
+  primary: #3498db,
+  secondary: #2ecc71,
+  text-base: #333,
+  background-light: #f8f8f8,
+  border-default: #ddd,
+  text-heading: #1a1a1a,
+  button-bg-primary: #e74c3c
+);
+
+// Fuentes
+$typography: (
+  font-stack-base: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  // Tamaño
+  font-size-base: 16px,
+  font-size-large: 1.25em,
+  font-size-small: 0.875em,
+  // Peso
+  font-weight-light: 300,
+  font-weight-normal: 400,
+  font-weight-bold: 700,
+  font-weight-extra-bold: 900,
+  // Estilo
+  font-style-italic: italic,
+  font-style-normal: normal
+);
+
+// Espaciados
+$spacing: (
+  unit: 1em,
+  small: 0.5em,
+  medium: 1em,
+  large: 2em
+);
+
+$anchoBoton: map.get($spacing, unit) * 1.2;
+
+// Breakpoints para responsive design
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Otros
+$border-radius: 4px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

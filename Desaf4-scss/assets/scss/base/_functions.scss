@@ -1,0 +1,58 @@
+@use 'sass:map';
+
+// Función para convertir píxeles a ems
+@function em($pixels, $base-font-size: 16px) {
+  @return ($pixels / $base-font-size) * 1em;
+}
+
+// Función para oscurecer un color
+@function darken-color($color, $amount) {
+  @return darken($color, $amount);
+}
+
+// Función para aclarar un color
+@function lighten-color($color, $amount) {
+  @return lighten($color, $amount);
+}
+
+// Ejemplo de uso:
+// .element {
+//   font-size: em(24px); // Esto convertiría 24px a ems basado en un font-size base de 16px
+//   background-color: darken-color($primary-color, 10%);
+// }
+
+// formatoBoton
+// Recibe un ancho y opcionalmente valores RGB para el color.
+@function formatoBoton($ancho, $r: 0, $g: 0, $b: 0) { // $r, $g, $b son opcionales con valores por defecto 0
+  // Validación de los valores RGB
+  @if $r < 0 or $r > 255 or $g < 0 or $g > 255 or $b < 0 or $b > 255 {
+    @warn "ADVERTENCIA: Los valores RGB para la función formatoBoton están fuera del rango [0-255]. " +
+          "Esto podría resultar en un color inesperado o inválido.";
+  }
+
+  // --- OPERACIÓN ARITMÉTICA Y CONDICIONAL ---
+  $resultado-multiplicacion: $ancho * 5; // Multiplica el ancho por 5
+
+  @if $resultado-multiplicacion < 100px {
+    @debug "ERROR (formatoBoton): El valor del ancho proporcionado ($ancho) hace que el resultado de la multiplicación ($resultado-multiplicacion) sea menor a 100px. El valor del ancho debe ser mayor a 20.";
+    // para evitar que se apliquen anchos inválidos.
+    // Para este ejercicio, simplemente emitiremos el debug.
+  }
+
+  $final-width: null; // Inicializa la variable de ancho final
+
+  @if $resultado-multiplicacion > 125px { // Estructura condicional
+    $final-width: $ancho; // Si es mayor a 125px, el ancho final es el ancho original
+  } @else {
+    // Si no es mayor a 125px, puedes decidir qué ancho asignar. se hace que el ancho sea el resultado de la multiplicación:
+    $final-width: $resultado-multiplicacion;
+  }
+
+  // Construye el mapa de estilos
+  $button-styles: (
+    width: $final-width, // Usa el ancho determinado por la condición
+    background-color: rgb($r, $g, $b) // Usa los parámetros r,g,b para el color
+  );
+
+  @return $button-styles;
+}

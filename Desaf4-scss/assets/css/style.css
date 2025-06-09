@@ -1,0 +1,96 @@
+@charset "UTF-8";
+.my-button, .another-button, .last-button {
+  border-radius: 1em;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 14.4em;
+  min-height: 9.6em;
+}
+
+:root {
+  --primary: #3498db;
+  --secondary: #2ecc71;
+  --text-base: #333;
+  --background-light: #f8f8f8;
+  --border-default: #ddd;
+  --text-heading: #1a1a1a;
+  --button-bg-primary: #e74c3c;
+}
+
+:root {
+  --font-stack-base: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-large: 1.25em;
+  --font-size-small: 0.875em;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+  --font-style-italic: italic;
+  --font-style-normal: normal;
+}
+
+:root {
+  --unit: 1em;
+  --small: 0.5em;
+  --medium: 1em;
+  --large: 2em;
+}
+
+body {
+  font-family: var(--font-stack-base);
+  margin: 20px;
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+h1, h2, h3 {
+  color: var(--text-heading);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+}
+
+.hero-section {
+  background-color: #2ecc71;
+  padding: 4em 0;
+  text-align: center;
+}
+
+.my-button {
+  border-radius: 1em 0 0 0;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.another-button {
+  background-color: #2ecc71;
+  font-style: italic;
+}
+
+.last-button {
+  /**
+   *  Ejemplo 3: 3px (3 * 5 = 15px, que no es > 125px), y activa el @debug porque 15px < 100px.
+   *  Ademas el mensaje de depuración sera: "ERROR (formatoBoton): ... El valor del ancho debe ser mayor a 20." ($ancho)
+   */
+  width: 100px;
+  background-color: rgb(100, 200, 50);
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */

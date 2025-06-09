@@ -1,0 +1,74 @@
+@use 'sass:map';
+@use 'base/mixins';
+@use 'base/placeholders';
+@use 'base/variables';
+@use 'base/functions';
+
+// --- GENERACIÓN DE CUSTOM PROPERTIES CSS ---
+// Esto es lo que va a crear el :root con --secondary: #2ecc71;
+@include mixins.generate-custom-properties(variables.$colors);
+@include mixins.generate-custom-properties(variables.$typography);
+@include mixins.generate-custom-properties(variables.$spacing);
+
+
+body {
+  font-family: var(--font-stack-base);
+  margin: 20px;
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+h1, h2, h3 {
+  color: var(--text-heading);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+}
+
+.hero-section {
+  background-color: map.get(variables.$colors, secondary);
+  padding: 4em 0;
+  text-align: center;
+}
+
+// ESTILOS DE LOS BOTONES
+
+// Estilo para el botón que usa el mixin y el placeholder
+.my-button {
+  @extend %button-base; // Usa el placeholder para el estilo base
+  @include mixins.button-format(1em, 0, 0, 0); // Sobrescribe el border-radius del placeholder con el mixin
+  font-weight: map.get(variables.$typography, font-weight-bold);
+}
+
+// Estilo para el botón que > > >
+.another-button {
+  @extend %button-base; // Solo extiende el placeholder
+  background-color: map.get(variables.$colors, secondary); // color diferente
+  font-style: map.get(variables.$typography, font-style-italic);
+}
+
+// Estilo para el botón que usa el placeholder y la función
+.last-button {
+  // lo extenderemos para que tenga el padding, display:flex, etc.
+  @extend %button-base;
+
+  // Llamada a la función formatoBoton para determinar su ancho y color
+  // diferentes valores de $ancho para ver la condición:
+  // Ejemplo 1: 30px (30 * 5 = 150px, que es > 125px, así que el ancho final será 30px)
+  // Ejemplo 2: 20px (20 * 5 = 100px, que no es > 125px, así que el ancho final será 100px) Este es el menor tamaño que acepta
+ /**
+  *  Ejemplo 3: 3px (3 * 5 = 15px, que no es > 125px), y activa el @debug porque 15px < 100px.
+  *  Ademas el mensaje de depuración sera: "ERROR (formatoBoton): ... El valor del ancho debe ser mayor a 20." ($ancho)
+  */
+  $last-button-styles: functions.formatoBoton(20px, 100, 200, 50); // Ejemplo 2: un color azul-verdoso
+
+  width: map.get($last-button-styles, width);
+  background-color: map.get($last-button-styles, background-color);
+  font-weight: map.get(variables.$typography, font-weight-bold);
+}
