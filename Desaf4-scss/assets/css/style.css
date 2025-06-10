@@ -13,6 +13,57 @@
   min-height: 9.6em;
 }
 
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+header .logo h1 {
+  padding: 10px;
+  font-size: var(--font-size-large);
+  color: var(--text-heading);
+}
+header .main-nav ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: var(--spacing-large);
+}
+header .main-nav ul li {
+  background-color: var(--background-transparent);
+  border: 1px solid var(--border-default);
+  padding: var(--spacing-large);
+}
+header .main-nav ul li a {
+  background-color: var(--background-transparent);
+  border: 1px solid var(--border-default);
+  padding: 10px;
+  text-decoration: none;
+  color: var(--primary);
+}
+header .main-nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+header .main-nav ul .social-icons {
+  display: flex;
+  gap: var(--spacing-medium);
+  margin-left: var(--spacing-medium);
+}
+header .main-nav ul .social-icons a {
+  font-size: var(--font-size-large);
+  color: var(--text-base);
+}
+header .main-nav ul .social-icons a:hover {
+  color: var(--primary);
+}
+
 :root {
   --primary: #3498db;
   --secondary: #2ecc71;
@@ -43,6 +94,31 @@
   --large: 2em;
 }
 
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-text-base: #333;
+  --color-background-light: #f8f8f8;
+  --color-border-default: #ddd;
+  --color-text-heading: #1a1a1a;
+  --color-button-bg-primary: #e74c3c;
+}
+
+:root {
+  --spacing-unit: 1em;
+  --spacing-small: 0.5em;
+  --spacing-medium: 1em;
+  --spacing-large: 2em;
+}
+
+:root {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
 body {
   font-family: var(--font-stack-base);
   margin: 20px;
@@ -51,6 +127,11 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
+  background-image: url("../img/97360.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {

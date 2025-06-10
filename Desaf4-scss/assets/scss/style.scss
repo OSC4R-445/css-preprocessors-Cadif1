@@ -3,6 +3,7 @@
 @use 'base/placeholders';
 @use 'base/variables';
 @use 'base/functions';
+@use 'components/header';
 
 // --- GENERACIÓN DE CUSTOM PROPERTIES CSS ---
 // Esto es lo que va a crear el :root con --secondary: #2ecc71;
@@ -10,6 +11,13 @@
 @include mixins.generate-custom-properties(variables.$typography);
 @include mixins.generate-custom-properties(variables.$spacing);
 
+// ... (imports) ...
+
+@include mixins.generate-custom-properties(variables.$colors, 'color-');
+@include mixins.generate-custom-properties(variables.$spacing, 'spacing-');
+@include mixins.generate-custom-properties(variables.$breakpoints, 'breakpoint-');
+
+// ... (otros imports) ...
 
 body {
   font-family: var(--font-stack-base);
@@ -19,6 +27,11 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
+  background-image: url('../img/97360.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
 }
 
 h1, h2, h3 {

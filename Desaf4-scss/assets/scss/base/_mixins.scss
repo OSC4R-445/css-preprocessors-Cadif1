@@ -42,3 +42,13 @@
   // Si aquí usaras variables.$anchoBoton, asegúrate de que esté importado arriba
   // width: variables.$anchoBoton;
 }
+
+ // ----- components header ------
+@mixin generate-custom-properties($mapa-de-propiedades, $prefix: '') {
+  :root {
+    @each $key, $value in $mapa-de-propiedades {
+      // Usamos #{$prefix} para añadir el prefijo antes del nombre de la clave
+      --#{$prefix}#{$key}: #{$value};
+    }
+  }
+}

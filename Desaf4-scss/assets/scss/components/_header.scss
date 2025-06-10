@@ -1,0 +1,66 @@
+@use 'sass:map';
+@use '../base/variables';
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+    .logo {
+        h1 {
+            padding: 10px;
+            font-size: var(--font-size-large);
+            color: var(--text-heading);
+        }
+    }
+
+    .main-nav {
+
+        ul {
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: var(--spacing-large);
+
+            li {
+                background-color: var(--background-transparent);
+                border: 1px solid var(--border-default);
+                padding: var(--spacing-large);
+
+                a {
+                    background-color: var(--background-transparent);
+                    border: 1px solid var(--border-default);
+                    padding: 10px;
+                    text-decoration: none;
+                    color: var(--primary);
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: var(--secondary);
+                    }
+                }
+            }
+
+            .social-icons {
+                display: flex;
+                gap: var(--spacing-medium);
+                margin-left: var(--spacing-medium);
+
+                a {
+                    font-size: var(--font-size-large);
+                    color: var(--text-base);
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+}
